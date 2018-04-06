@@ -9,5 +9,11 @@ jobs:
           name: Greeting
           command: echo Hello, world.
       - run:
-          name: Print the Current Time
-          command: date
+          name: Install awscli
+          command: apt-get update && apt-get install -y awscli
+      - run:
+          name: Aws --version
+          command: aws --version
+      - run:
+          name: Deploy to S3
+          command: aws s3 sync . s3://jiribatko.com --region ca-central-1 --delete
