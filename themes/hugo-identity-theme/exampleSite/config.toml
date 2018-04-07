@@ -1,15 +1,15 @@
 # Site settings
-baseurl = "https://jiribatko.com"
+baseurl = "http://example.org" #without ending slash
 languageCode = "en-us"
-title = "Jiri Batko"
+title = "Hugo Identity Theme"
 theme = "hugo-identity-theme"
-themesDir = "./themes"
+themesDir = "../.."
 
 # Disable unnecessary kinds
 disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
 
 # Enter your tracking code to enable Google Analytics
-googleAnalytics = "UA-116897462-1"
+#googleAnalytics = "UA-XXXXX-Y"
 
 [params]
 
@@ -21,7 +21,7 @@ googleAnalytics = "UA-116897462-1"
   # Site icons
   favicon_ico = "favicon.ico"
   favicon_ico_sizes = "16x16 32x32"
-  appleicon = "apple-icon.png"
+  appleicon = "apple.png"
 
   # Additional options to supplement icons served
   #favicon_png = "favicon.png"
@@ -30,30 +30,32 @@ googleAnalytics = "UA-116897462-1"
 
   # Link custom assets relative to /static
   #custom_js  = [""]
-  custom_css = ["background.css", "icons.css"]
+  #custom_css = ["background.css", "icons.css"]
 
   # Customization switches
   # Overwrite FontAwesome: see icons.css
   #custom_icons = true
   # Overwrite background: see background.css
-  custom_background = true
+  #custom_background = true
 
   # Personal data
   [params.personal]
     # If name is not set, author is used
-    name = "Jiri Batko"
+    name = "Jane Powers"
     # Avatars can be written to images/avatars/
-    avatar = "avatar.jpg"
-    position = "Full Stack Developer"
-    livesIn = "[Vancouver, Canada](https://maps.google.com/maps?ll=49.246292,-123.116226&z=10&t=m&hl=en&gl=US)"
+    avatar = "jane.jpg"
+    position = "Lead Engineer"
+    livesIn = "[Munich, Germany](#some-maps-url)"
     scope = [
-        # "UX for [member dashboard](#)",
-        # "Maintainer for [awesome-project](#)",
-        # "Open Source [community management](#)"
+        "UX for [member dashboard](#)",
+        "Maintainer for [awesome-project](#)",
+        "Open Source [community management](#)"
       ]
-    biography = "Java certified professional with 12+ years of international(New Zealand, UK, Germany, Czech Republic, Canada) experience in software development."
+    biography = """Jane Powers is plain awesome. He worked at Corp A and B and is open for new work.  
+Even new lines and other markdown styles are working within the bio."""
 
   # Contact form settings
+
   [params.contact]
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
@@ -67,7 +69,7 @@ googleAnalytics = "UA-116897462-1"
     # - click the confirm link in the email from www.formspree.io
     # - you're done. Happy mailing!
 
-    email = "jiri.batko@gmail.com"
+    email = "your@email.com"
 
     # It is possible to substitute formspring with other providers
     # as an example the mailout plugin from caddy.
@@ -76,14 +78,14 @@ googleAnalytics = "UA-116897462-1"
 
     #postURL = "https://example.com/mailout/"
 
-    enable = true
-    title = "Contact Me!"
+    enable = false
+    title = "Touch Me!"
     namePlaceholder = "Name"
     emailPlaceholder = "Email"
     messagePlaceholder = "Message"
-    buttonText = "Send"
-    success = "Thank you for contacting me."
-    # error = "Message could not be send. Please contact me at "
+    buttonText = "Send it"
+    success = "Thank you for contacting us."
+    error = "Message could not be send. Please contact us at "
 
     # Google invisible captcha
     #[params.contact.captcha]
@@ -100,48 +102,30 @@ googleAnalytics = "UA-116897462-1"
     #  name = "page"
 
   # Social settings
-  [[params.social]]
-    title = "LinkedIn"
-    icon = "fa-linkedin"
-    link = "https://www.linkedin.com/in/jiribatko/"
-    target = "_blank"
+  # You may change these with your social links or add others
 
   [[params.social]]
-    title = "Facebook"
-    icon = "fa-facebook"
-    link = "https://www.facebook.com/jiri.batko"
+    title = "Twitter"
+    icon = "fa-twitter"
+    link = "#"
     target = "_blank"
 
   [[params.social]]
     title = "Instagram"
     icon = "fa-instagram"
-    link = "https://www.instagram.com/hubmucker/"
+    link = "#"
     target = "_blank"
 
   [[params.social]]
-    title = "Flickr"
-    icon = "fa-flickr"
-    link = "https://www.flickr.com/photos/31031565@N06/"
+    title = "Facebook"
+    icon = "fa-facebook"
+    link = "#"
     target = "_blank"
-
-  [[params.social]]
-    title = "Twitter"
-    icon = "fa-twitter"
-    link = "https://twitter.com/batkojiri"
-    target = "_blank"
-
-  [[params.social]]
-    title = "GitHub"
-    icon = "fa-github"
-    link = "https://github.com/batkoj"
-    target = "_blank" 
-
-
 
   # Footer settings
   [params.footer]
     # If copyright is not set, author is used
-    copyright = "Jiri Batko"
+    copyright = "Innovation inc"
 
   # Page license
   [params.license]
@@ -149,11 +133,6 @@ googleAnalytics = "UA-116897462-1"
     name = "CC-BY-SA-4.0"
 
   # Credits
-  [[params.credits]]
-    title = "HUGO"
-    text = ""
-    link = "https://gohugo.io/"
-
   [[params.credits]]
     # Title is used as URL text
     title = "HTML5UP"
