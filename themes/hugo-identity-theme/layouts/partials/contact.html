@@ -6,11 +6,11 @@
 {{ else }}
   <form  action="{{ .Site.Params.contact.postURL }}" method="POST" name="sentMessage" id="contactForm" novalidate>
 {{ end }}
-    <div class="field">
+    <!-- <div class="field">
       <input name="name" id="name" data-validation="required" placeholder="{{ .Site.Params.contact.namePlaceholder }}" />
-      </div>
+      </div> -->
     <div class="field">
-      <input type="email" name="email" id="email" data-validation="required" placeholder="{{ .Site.Params.contact.emailPlaceholder }}" />
+      <input  name="email" id="email" data-validation="email" placeholder="{{ .Site.Params.contact.emailPlaceholder }}" />
     </div>
     <div class="field">
       <textarea name="message" id="message" data-validation="required" placeholder="{{ .Site.Params.contact.messagePlaceholder }}" rows="4"></textarea>
