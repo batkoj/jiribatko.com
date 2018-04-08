@@ -3,20 +3,30 @@ jobs:
   build:
     docker:
       - image: cibuilds/hugo:0.37.1
+    working_directory: ~/project
     steps:
       - checkout
       - run:
-          name: Greeting
-          command: echo Hello, world.
-    - run:
+          name: "Ls"
+          command: ls -l    
+      - run:
           name: Hugo version
           command: hugo version
       - run:
           name: Install awscli
-          command: apt-get update && apt-get install -y awscli
+          command: apk --update add bash groff jq python-dev py-pip && pip install awscli
       - run:
           name: Aws --version
           command: aws --version
-    #   - run:
-    #       name: Deploy to S3
-    #       command: aws s3 sync . s3://jiribatko.com --region ca-central-1 --delete
+      - run:
+          name: "Run Hugo"
+          command: HUGO_ENV=production hugo -v
+      - run:
+          name: "Test Website"
+          command: htmlproofer ./public --allow-hash-href --check-html --empty-alt-ignore --disable-external    
+      - run:
+          name: Deploy to S3
+          command: aws s3 sync ./public s3://jiribatko.com --region ca-central-1 --delete
+      - run:
+          name: Invalidate CloudFront (CDN)
+          command: aws cloudfront create-invalidation --distribution-id EIS54TVLN40ML --paths '/*'
