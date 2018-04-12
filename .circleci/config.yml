@@ -2,19 +2,10 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cibuilds/hugo:0.37.1
+      - image: hubmucker/hugo-awscli:0.37.1
     working_directory: ~/project
     steps:
-      - checkout
-      - run:
-          name: "Ls"
-          command: ls -l    
-      - run:
-          name: Hugo version
-          command: hugo version
-      - run:
-          name: Install awscli
-          command: apk --update add bash groff jq python-dev py-pip && pip install awscli
+      - checkout      
       - run:
           name: Aws --version
           command: aws --version
