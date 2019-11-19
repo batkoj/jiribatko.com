@@ -115,7 +115,7 @@ googleAnalytics = "UA-116897462-1"
   [[params.social]]
     title = "Instagram"
     icon = "fa-instagram"
-    link = "https://www.instagram.com/hubmucker/"
+    link = "https://www.instagram.com/jiri.batko/"
     target = "_blank"
 
   [[params.social]]
