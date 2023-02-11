@@ -9,7 +9,7 @@ themesDir = "./themes"
 disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
 
 # Enter your tracking code to enable Google Analytics
-googleAnalytics = "UA-116897462-1"
+#googleAnalytics = "UA-116897462-1"
 
 [params]
 
@@ -51,7 +51,7 @@ googleAnalytics = "UA-116897462-1"
         # "Maintainer for [awesome-project](#)",
         # "Open Source [community management](#)"
       ]
-    biography = "Java and AWS certified professional with 13+ years of international(New Zealand, UK, Germany, Czech Republic, Canada) experience in software development."
+    biography = "Java and AWS certified professional with 17+ years of international(New Zealand, UK, Germany, Czech Republic, Canada) experience in software development."
 
   # Contact form settings
   [params.contact]
